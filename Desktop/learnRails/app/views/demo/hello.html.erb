@@ -1,0 +1,27 @@
+Just hello from hello
+
+<%=1+1%>
+
+<% target = "goodbye"%>
+
+<%="say #{target}"%>
+
+<% 3.times do |n| %>
+<%= n %>
+<% end %>
+
+<% @array.each do |n| %>
+<%= n %>
+<% end %>
+
+<br>
+how to use params between views
+<%= params[:id] %>
+<br>
+how to use params between views and controller
+<%= @id %>
+<br>
+note: param is always a string --> need converting to integer before calculate
+<%= @page.to_i + 1 %>
+
+<%= @test%>

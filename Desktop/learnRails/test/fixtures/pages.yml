@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visible: false
+  subject_id: 1
+  name: MyString
+  permalink: MyString
+  position: 1
+
+two:
+  visible: false
+  subject_id: 1
+  name: MyString
+  permalink: MyString
+  position: 1

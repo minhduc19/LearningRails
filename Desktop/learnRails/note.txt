@@ -1,0 +1,4 @@
+HOW TO UPLOAD A PHOTO [THIS EXAMPLE WORKS]
+
+https://www.sitepoint.com/uploading-files-with-paperclip/
+
