@@ -1,0 +1,11 @@
+[WARNING] The model name 'Pages' was recognized as a plural, using the singular 'Page' instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.
+      invoke  active_record
+      create    db/migrate/20170415193148_create_pages.rb
+    conflict    app/models/page.rb
+  Overwrite /Users/duc/Desktop/learnRails/app/models/page.rb? (enter "h" for helpp) [Ynaqdh] 
+       force    app/models/page.rb
+      invoke    test_unit
+   identical      test/models/page_test.rb
+    conflict      test/fixtures/pages.yml
+    Overwrite /Users/duc/Desktop/learnRails/test/fixtures/pages.yml? (enter "h" ffor help) [Ynaqdh] 
+       force      test/fixtures/pages.yml

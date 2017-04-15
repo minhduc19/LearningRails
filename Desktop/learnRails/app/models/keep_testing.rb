@@ -1,0 +1,2 @@
+class KeepTesting < ApplicationRecord
+end

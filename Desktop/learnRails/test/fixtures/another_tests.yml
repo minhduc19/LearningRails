@@ -2,14 +2,8 @@
 
 one:
   : 
-  : 
-  : 
-  : 
   =: MyString
 
 two:
-  : 
-  : 
-  : 
   : 
   =: MyString

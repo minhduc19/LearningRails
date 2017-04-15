@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20170415193605_create_test_pages.rb
+      create    app/models/test_page.rb
+      invoke    test_unit
+      create      test/models/test_page_test.rb
+      create      test/fixtures/test_pages.yml

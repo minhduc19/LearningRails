@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20170415200618_create_nocases.rb
+      create    app/models/nocase.rb
+      invoke    test_unit
+      create      test/models/nocase_test.rb
+      create      test/fixtures/nocases.yml

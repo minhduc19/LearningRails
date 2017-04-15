@@ -1,0 +1,2 @@
+class Finaltest < ApplicationRecord
+end

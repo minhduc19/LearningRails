@@ -1,0 +1,2 @@
+class CamelCase < ApplicationRecord
+end

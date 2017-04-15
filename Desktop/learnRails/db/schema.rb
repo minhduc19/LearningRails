@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415172059) do
+ActiveRecord::Schema.define(version: 20170415193148) do
+
+  create_table "another_tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.boolean  "visible",    default: false
+    t.integer  "subject_id"
+    t.string   "name"
+    t.string   "permalink"
+    t.integer  "position"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["permalink"], name: "index_another_tests_on_permalink", using: :btree
+    t.index ["subject_id"], name: "index_another_tests_on_subject_id", using: :btree
+  end
 
   create_table "members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email",                  default: "", null: false
@@ -33,11 +45,9 @@ ActiveRecord::Schema.define(version: 20170415172059) do
     t.boolean  "visible",    default: false
     t.integer  "subject_id"
     t.string   "name"
-    t.string   "permalink"
     t.integer  "position"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
-    t.index ["permalink"], name: "index_pages_on_permalink", using: :btree
     t.index ["subject_id"], name: "index_pages_on_subject_id", using: :btree
   end
 
@@ -63,12 +73,45 @@ ActiveRecord::Schema.define(version: 20170415172059) do
     t.index ["page_id"], name: "index_sections_on_page_id", using: :btree
   end
 
+  create_table "sometests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.boolean  "visible",    default: false
+    t.integer  "subject_id"
+    t.string   "name"
+    t.string   "permalink"
+    t.integer  "position"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["subject_id"], name: "index_sometests_on_subject_id", using: :btree
+  end
+
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "name"
     t.integer  "position"
     t.boolean  "visible",    default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "test_pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.boolean  "visible",    default: false
+    t.integer  "subject_id"
+    t.string   "name"
+    t.string   "permalink"
+    t.integer  "position"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.boolean  "visible",    default: false
+    t.integer  "subject_id"
+    t.string   "name"
+    t.string   "permalink"
+    t.integer  "position"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["permalink"], name: "index_tests_on_permalink", using: :btree
+    t.index ["subject_id"], name: "index_tests_on_subject_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
