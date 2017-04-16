@@ -1,2 +1,0 @@
-class Nocase < ApplicationRecord
-end

@@ -1,2 +1,0 @@
-class YearOf < ApplicationRecord
-end

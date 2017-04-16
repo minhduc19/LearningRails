@@ -1,2 +1,0 @@
-class KeepTesting < ApplicationRecord
-end

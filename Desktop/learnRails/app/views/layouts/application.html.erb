@@ -30,6 +30,15 @@
     </div>
   <% end %>
 
+  <div>
+  <%= test = Announcement.find(1).message%>
+
+    <% for announcement in Announcement.current_announcement%>
+      <p><%=h announcement.message%></p>
+    <% end%>
+    <p><%= link_to "Hide this message", :url => "/javascripts/hide_announcement.js"%></p>
+  </div>
+
   <%= yield %>
 </div>
     

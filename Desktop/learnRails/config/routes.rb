@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+ 
+  resources :announcements
 	 resources :photos, only: [:new, :create, :index]
 
   get 'experiment/test'
