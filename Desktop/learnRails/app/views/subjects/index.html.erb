@@ -1,2 +1,13 @@
 <h1>Subjects#index</h1>
 <p>Find me in app/views/subjects/index.html.erb</p>
+
+<%= link_to("add new subject", new_subject_path)%>
+
+<% @subject.each do |subject|%>
+
+	<li><%=subject.id%> | <%=subject.name%> |  visible: <%=subject.visible ? 'yes' : 'no'%>| page: <%=subject.pages.size%>
+		<%=link_to("show", {:controller => "subjects", :action => "show", :id  => subject.id} , :class => 'action_show')%>
+		<%=link_to("edit", "#", :class => 'action_edit')%>
+		<%=link_to("delete", "#", :class => 'action_delete')%>
+	</li>
+<% end %>

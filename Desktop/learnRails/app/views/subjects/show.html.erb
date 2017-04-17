@@ -1,2 +1,11 @@
 <h1>Subjects#show</h1>
 <p>Find me in app/views/subjects/show.html.erb</p>
+
+
+<%=link_to "back to subject list", subjects_path%>
+
+<p><%=@subject.name%></p>
+
+<p>Visible: <%=@subject.visible ? "yes" : "no"%> </p>
+
+

@@ -1,2 +1,13 @@
 <h1>Subjects#new</h1>
 <p>Find me in app/views/subjects/new.html.erb</p>
+
+<%=link_to "back to subject list", subjects_path%>
+
+<%=form_for(@subject, :url => subjects_path, :method => 'post') do |f| %>
+	
+	<p>name: <%= f.text_field(:name)%></p>
+	<p>position: <%= f.text_field(:position)%></p>
+	<p>visible: <%= f.text_field(:visible)%></p>
+	<p><%=f.submit("create object")%></p>
+	
+<%end%>
